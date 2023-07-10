@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Oswald", sans-serif;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+header {
+  background-color: #333;
+  padding: 10px 0;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-content .brand {
+  font-size: 30px;
+  text-decoration: none;
+  color: #fff;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul#user_info {
+  display: none;
+  align-items: center;
+}
+nav ul#user_info .cart-products {
+  position: absolute;
+  width: 160px;
+  background-color: #eaeaea;
+  transform: translate(-50%, 0px);
+  padding: 10px;
+  top: 44px;
+  border: 1px solid darkgreen;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  display: none;
+}
+nav ul#user_info .cart-products a {
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  background-color: darkgreen;
+  margin: 0;
+  padding: 8px;
+}
+nav ul#user_info li:not(:last-of-type) {
+  margin-right: 10px;
+  position: relative;
+}
+nav ul#user_info li i {
+  color: #fff;
+  cursor: pointer;
+}
+nav ul#user_info li .badge {
+  width: 16px;
+  height: 16px;
+  background-color: crimson;
+  color: #fff;
+  text-align: center;
+  display: block;
+  position: absolute;
+  font-size: 10px;
+  border-radius: 50%;
+  top: -6px;
+  left: 11px;
+  display: none;
+}
+nav li a {
+  display: block;
+  color: #fff;
+  min-width: 50px;
+  margin: 0 5px;
+  padding: 5px;
+}
+/* ********** Form *********** */
+.section-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  text-align: center;
+  background-color: #bc6ff1;
+  padding: 20px;
+  border-radius: 10px;
+}
+.section-form h2 {
+  font-size: 48px;
+  letter-spacing: 2px;
+  color: #52057b;
+  margin-bottom: 20px;
+}
+
+.section-form form input {
+  display: block;
+  font-size: 15px;
+  width: 98%;
+  margin: 5px;
+  height: 40px;
+  border: 1px solid #ddd;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px;
+  color: #52057b;
+  font-family: "Oswald", sans-serif;
+  transition: 0.3s;
+}
+.section-form form input:not(:last-child):hover {
+  box-shadow: 0 0px 14px inset #bc6ff1;
+}
+.section-form form input::placeholder {
+  color: #52057b;
+}
+.section-form form input[type="submit"] {
+  font-size: 20px;
+  text-transform: uppercase;
+  height: auto;
+  transition: 0.3s opacity;
+}
+.section-form form input[type="submit"]:hover {
+  opacity: 0.8;
+}
+#search {
+  display: block;
+  height: 40px;
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid #b5b5b5;
+  border-radius: 4px;
+  font-size: 17px;
+  font-family: "Oswald", sans-serif;
+  outline: none;
+  transition: 0.3s;
+}
+#search::placeholder {
+  color: #937f8a;
+}
+/* ********** Products *********** */
+.products {
+  width: 60%;
+  float: left;
+  margin: 10px 0;
+}
+
+.products-filter {
+  width: 35%;
+  float: right;
+  margin: 10px 0;
+}
+#size-filter {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #b5b5b5;
+  border-radius: 4px;
+  font-family: "Oswald", sans-serif;
+  margin-top: 6px;
+  outline: none;
+  font-size: 17px;
+  color: #937f8a;
+}
+.product-item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.product-item-img {
+  width: 28%;
+  min-height: 145px;
+  margin-right: 10px;
+}
+.edit-product {
+  display: block;
+  border: none;
+  width: 100px;
+  background: darkgreen;
+  color: #fff;
+  padding: 5px 5px;
+  cursor: pointer;
+  margin-top: 7px;
+  border-radius: 4px;
+  font-family: "Oswald", sans-serif;
+}
+.delete {
+  position: absolute;
+  font-size: 35px;
+  color: brown;
+  right: 3px;
+  bottom: 3px;
+  cursor: pointer;
+}
+.delete:hover {
+  opacity: 0.9;
+}
+.product-item-desc a {
+  display: block;
+  font-size: 25px;
+  color: #333;
+  cursor: pointer;
+}
+.product-item-actions {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3px;
+}
+.product-item-actions .add-to-card {
+  width: fit-content;
+  margin-left: auto;
+  background-color: darkgreen;
+  color: #fff;
+  border: 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.product-item-actions .heart {
+  font-size: 28px;
+  cursor: pointer;
+  width: fit-content;
+  margin-left: auto;
+  color: darkgray;
+}
+.item-details {
+  text-align: center;
+  border: 1px solid #afafaf;
+  background-color: darkgrey;
+  border-radius: 10px;
+  padding-top: 30px;
+  width: 800px;
+  margin: 20px auto 0;
+}
+.item-details img {
+  width: 100%;
+  height: 350px;
+  margin: 10px auto;
+  object-fit: contain;
+  display: block;
+}
+
+/**************** Create Product ***************/
+.creat-product-icon {
+  position: fixed;
+  right: 35px;
+  bottom: 35px;
+  width: 50px;
+  height: 50px;
+  background-color: darkgray;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+}
+.creat-product-icon:hover {
+  opacity: 0.8;
+}
+.item-qty {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: darkgreen;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 15px;
+  font-size: 10px;
+}
+#user-avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 10px 0;
+}
+#editPrfile {
+  background-color: brown;
+  color: #fff;
+  padding: 4px 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  display: block;
+  margin-top: 10px;
+  width: fit-content;
+}
+#edit-profile-form input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #999;
+  margin: 10px 0;
+  display: block;
+  border-radius: 6px;
+  font-size: 18px;
+  outline: none;
+}
+#edit-profile-form input[type="submit"] {
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+}
+#en_lang,
+#ar_lang {
+  color: #333;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:wght@400;500&display=swap" rel="stylesheet" />
+    <title>shopping Cart | Cart Page</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-rtl.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="brand">shopping Cart</a>
+                <nav>
+                    <ul id="links">
+                        <li><a href="login.html">Sign In</a></li>
+                        <li><a href="register.html">Sign Up</a></li>
+                    </ul>
+                    <ul id="user_info">
+                        <li id="en_lang">En</li>
+                        <li id="ar_lang">Ar</li>
+                        <li><a href="profile.html" id="user"></a></li>
+                        <li><a href="favorites.html">Favorites</a></li>
+                        <li><a href="myProducts.html">My Products</a></li>
+                        <li class="shoppingCart"><i class="fas fa-shopping-cart"></i>
+                            <span class="badge"></span>
+                            <div class="cart-products">
+                                <div></div>
+                                <a href="cartproducts.html">view all products</a>
+                            </div>
+                        </li>
+                        <li><a href="#" id="logout">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="products">
+        </div>
+        <a href="createProduct.html" class="creat-product-icon"><i class="fa fa-plus"></i></a>
+    </div>
+
+    <div style="font-size: 30px; width: fit-content; display: none; " class=" section-form">
+        <div class="noProducts">
+        </div>
+        <a style="background-color: #fff; cursor: pointer;position: relative;display: block; border-radius: 4px;width: 150px;margin: 30px auto 0; text-decoration: none; "
+            href="index.html">Add
+            Items</a>
+    </div>
+
+    <script src="JS/data.js"></script>
+    <script src="js/cartMenue.js"></script>
+    <script src="js/cartproducts.js"></script>
+    <script src="js/user.js"></script>
+    <script src="JS/langDir.js"></script>
+
+</body>
+
+</html>
